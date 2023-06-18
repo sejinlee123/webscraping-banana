@@ -2,7 +2,7 @@
 
 import bs4
 import requests
-
+import search
 
 def algo1():
     url = "https://en.wikipedia.org/wiki/Poppy_seed_defence"
@@ -40,4 +40,5 @@ def algo2():
 
 
 if __name__ == "__main__":
-    algo2()
+    a_search = search.Search("https://en.wikipedia.org/wiki/Miniature_wargaming")
+

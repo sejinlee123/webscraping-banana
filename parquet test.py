@@ -3,10 +3,16 @@ import pyarrow.parquet as pq
 import pandas as pd
 import numpy as np
 
-
-table2= pq.read_table('wiki_node_storage.parquet')
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.max_rows', 1000000)
+table2= pq.read_table('wiki_storage.parquet')
 table2 = table2.to_pandas()
-print(table2)
+
+
+df = table2
+
+print(df.head(1000))
+
 
 
 
