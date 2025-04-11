@@ -1,2 +1,18 @@
-# Shitty_Degrees_Of_Wikipedia
- Shit version of six degrees of wiki.
+# webscraping-banana
+
+This project uses the **C++ Requests** library to perform web scraping.
+
+## Structure
+
+- `main.py`: Entry point that accesses the classes inside the `search/` folder.
+
+### `search/` Folder:
+
+- **Class `Storage`**  
+  Acts as the "black box" between `main.py` and the web scraper along with the storage solution pyarrow.
+
+- **Class `Search`**  
+  Responsible for scraping, filtering inputs, and storing results.
+
+- **Class `Node`**  
+  Handles the structure of the resulting data and manages blacklists to avoid duplicates.

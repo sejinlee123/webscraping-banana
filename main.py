@@ -10,7 +10,7 @@ import search
 def main():
 
     a_search = search.Search("https://en.wikipedia.org/wiki/Miniature_wargaming")
-    a_search.generate_data_base(11)
+    a_search.generate_data_base(6)
     a_search.storage.compile()
     a_search.storage.save()
     quit()

@@ -13,8 +13,7 @@ class Search:
     root_url = "https://en.wikipedia.org/wiki/Banana"
     filter_one = {"#", "h", "//", "/w/", ")", "gpj.", "GPJ.", ".fdp", ".FDP"}
     filter_two = {"/wiki/Main_Page", "/wiki/Wikipedia", "/wiki/Portal", "/wiki/Special", "/wiki/Help",
-                  "/wiki/Talk", "/wiki/Category" + "filter breaker", "/wiki/Template", "/wiki/File:",
-                  "/wiki/List" + "filter breaker", "//ftp.fao.org/"}
+                  "/wiki/Talk", "/wiki/Category", "/wiki/Template", "/wiki/File:", "/wiki/List", "ftp:", "ftp."}
 
     def __init__(self, target_url):
         self.target_url = target_url
@@ -45,6 +44,11 @@ class Search:
             index += 1
 
     def buffer(self, link):
+        try:
+            result = requests.get(link)
+            return result
+        except:
+            pass
         try:
             result = requests.get(link)
         except:
