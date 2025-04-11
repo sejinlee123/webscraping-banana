@@ -16,3 +16,4 @@ This project uses the **C++ Requests** library to perform web scraping.
 
 - **Class `Node`**  
   Handles the structure of the resulting data and manages blacklists to avoid duplicates.
+#Note that the main bottleneck is the rate limiting of Wikipedia which is around a second on average.
